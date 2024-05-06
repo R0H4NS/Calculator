@@ -1,7 +1,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: 200px 200px 200px 200px;
-    margin-top: 50px;
+    margin-top: 300px;
     justify-content: center;
 }
     .grid-item {
