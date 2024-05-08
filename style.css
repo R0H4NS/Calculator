@@ -13,14 +13,17 @@ body
 }
 #screen
 {
-    margin-top: 50px;
-    padding-top: 200px;
+    width: 495px;
+    margin-top: 0px;
+    padding-top: 250px;
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.8);
     justify-content: center;
     text-align: center;
     background-color: burlywood;
     font-size: 50px;
+    color: darkred;
+
 }
 .grid-container {
     display: grid;
@@ -35,18 +38,19 @@ body
     font-size: 30px;
     text-align: center;
     position: relative;
+    font-family: "Comic Sans MS";
 }
 
-.grid-container button:hover {
+.grid-container :hover {
     background: royalblue;
 }
 
-.grid-container button:active {
+.grid-container :active {
     position: relative;
     border: 2px solid darkred;
 
 }
 
-.grid-container button:nth-child(4n){
+.grid-container :nth-child(4n){
     border-right: none;
 }

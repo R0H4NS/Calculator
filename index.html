@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Calculator</title>
 </head>
     <div id="Calculator">
-        <div id="screen">
-            <p>---</p>
-        </div>
+
+        <td colspan="3"> <input class="display-box" type="text" id="screen" disabled /> </td>
+
         <div class="grid-container">
-            <button type="button" class="grid-item">(</button>
-            <button type="button" class="grid-item">)</button>
-            <button type="button" class="grid-item">^</button>
-            <button type="button" class="grid-item">√</button>
-            <button type="button" class="grid-item">7</button>
-            <button type="button" class="grid-item">8</button>
-            <button type="button" class="grid-item">9</button>
-            <button type="button" class="grid-item">A/C</button>
-            <button type="button" class="grid-item">4</button>
-            <button type="button" class="grid-item">5</button>
-            <button type="button" class="grid-item">6</button>
-            <button type="button" class="grid-item">Delete</button>
-            <button type="button" class="grid-item">1</button>
-            <button type="button" class="grid-item">2</button>
-            <button type="button" class="grid-item">3</button>
-            <button type="button" class="grid-item">History</button>
-            <button type="button" class="grid-item">0</button>
-            <button type="button" class="grid-item">.</button>
-            <button type="button" class="grid-item">±</button>
-            <button type="button" class="grid-item">Enter</button>
-            <button type="button" class="grid-item">+</button>
-            <button type="button" class="grid-item">-</button>
-            <button type="button" class="grid-item">*</button>
-            <button type="button" class="grid-item">÷</button>
+            <input class="grid-item" type="button" value="A/C" onclick="clearScreen()"/>
+            <input class="grid-item" type="button" value="(" onclick="display('(')" />
+            <input class="grid-item" type="button" value=")" onclick="display(')')" />
+            <input class="grid-item" type="button" value="^" onclick="display('^')" />
+            <input class="grid-item" type="button" value="7" onclick="display('7')" />
+            <input class="grid-item" type="button" value="8" onclick="display('8')" />
+            <input class="grid-item" type="button" value="9" onclick="display('9')" />
+            <input class="grid-item" type="button" value="√" onclick="display('√')" />
+            <input class="grid-item" type="button" value="4" onclick="display('4')" />
+            <input class="grid-item" type="button" value="5" onclick="display('5')" />
+            <input class="grid-item" type="button" value="6" onclick="display('6')" />
+            <input class="grid-item" type="button" value="Delete" onclick="display('Delete')" />
+            <input class="grid-item" type="button" value="1" onclick="display('1')" />
+            <input class="grid-item" type="button" value="2" onclick="display('2')" />
+            <input class="grid-item" type="button" value="3" onclick="display('3')" />
+        <div class="grid-item">History</div>
+            <input class="grid-item" type="button" value="0" onclick="display('0')" />
+            <input class="grid-item" type="button" value="." onclick="display('.')" />
+            <input class="grid-item" type="button" value="±" onclick="display('-')" />
+            <input class="grid-item" type="button" value="=" onclick="calculate()"  />
+            <input class="grid-item" type="button" value="+" onclick="display('+')" />
+            <input class="grid-item" type="button" value="-" onclick="display('-')" />
+            <input class="grid-item" type="button" value="*" onclick="display('*')" />
+            <input class="grid-item" type="button" value="÷" onclick="display('÷')" />
         </div>
     </div>
 
