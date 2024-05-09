@@ -15,30 +15,39 @@ body
 {
     width: 495px;
     margin-top: 0px;
-    padding-top: 250px;
     background-color: rgba(255, 255, 255, 0.8);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     border: 2px solid rgba(0, 0, 0, 0.8);
     justify-content: center;
     text-align: center;
     background-color: burlywood;
     font-size: 50px;
     color: darkred;
+    border-top: 20px;
+    border-left: 20px;
+    border-right: 20px;
 
 }
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     justify-content: center;
+    background-color: white;
+    padding: 20px;
 }
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 0, 0, 1);
     background-color: cornflowerblue;
     padding: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
     font-size: 30px;
-    text-align: center;
     position: relative;
-    font-family: "Comic Sans MS";
+    font-family: "Book Antiqua";
 }
 
 .grid-container :hover {
@@ -48,9 +57,8 @@ body
 .grid-container :active {
     position: relative;
     border: 2px solid darkred;
-
 }
 
-.grid-container :nth-child(4n){
-    border-right: none;
-}
+/*.grid-container :nth-child(4n){*/
+/*    border-right: none;*/
+/*}*/

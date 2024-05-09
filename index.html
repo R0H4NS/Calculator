@@ -8,7 +8,8 @@
 </head>
     <div id="Calculator">
 
-        <td colspan="3"> <input class="display-box" type="text" id="screen" disabled /> </td>
+
+        <td colspan="3"> <input class="screen" type="text" id="screen" /> </td>
 
         <div class="grid-container">
             <input class="grid-item" type="button" value="A/C" onclick="clearScreen()"/>
@@ -18,11 +19,11 @@
             <input class="grid-item" type="button" value="7" onclick="display('7')" />
             <input class="grid-item" type="button" value="8" onclick="display('8')" />
             <input class="grid-item" type="button" value="9" onclick="display('9')" />
-            <input class="grid-item" type="button" value="√" onclick="Math.sqrt('√')" />
+            <input class="grid-item" type="button" value="√" onclick='display("Math.sqrt(")' />
             <input class="grid-item" type="button" value="4" onclick="display('4')" />
             <input class="grid-item" type="button" value="5" onclick="display('5')" />
             <input class="grid-item" type="button" value="6" onclick="display('6')" />
-            <input class="grid-item" type="button" value="Delete" onclick="display('Delete')" />
+            <input class="grid-item" type="button" value="Delete" onclick="deletes()" />
             <input class="grid-item" type="button" value="1" onclick="display('1')" />
             <input class="grid-item" type="button" value="2" onclick="display('2')" />
             <input class="grid-item" type="button" value="3" onclick="display('3')" />
