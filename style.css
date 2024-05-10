@@ -8,34 +8,42 @@ body
 }
 #Calculator
 {
+    background-color: slategrey;
+    padding-top: 45px;
     justify-content: center;
+    align-items: center;
     width: min(90%, 500px);
+    margin-top: 100px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 #screen
 {
-    width: 495px;
-    margin-top: 0px;
+    width: 90%;
+    margin-left: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
     border: 2px solid rgba(0, 0, 0, 0.8);
     justify-content: center;
     text-align: center;
-    background-color: burlywood;
+    align-items: center;
+    background-color: mintcream;
     font-size: 50px;
-    color: darkred;
-    border-top: 20px;
-    border-left: 20px;
-    border-right: 20px;
-
+    color: darkblue;
 }
 .grid-container {
+    padding-top: 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     justify-content: center;
-    background-color: white;
+    background-color: slategrey;
     padding: 20px;
 }
 .grid-item {
@@ -48,17 +56,28 @@ body
     font-size: 30px;
     position: relative;
     font-family: "Book Antiqua";
+    border-radius: 25px;
 }
 
 .grid-container :hover {
     background: royalblue;
 }
 
-.grid-container :active {
-    position: relative;
-    border: 2px solid darkred;
+
+.otherblue {
+    background-color: dodgerblue;
 }
 
-/*.grid-container :nth-child(4n){*/
-/*    border-right: none;*/
-/*}*/
+.navyblue {
+    background-color: #3e4ebd;
+}
+
+.darkblue {
+    background-color: skyblue;
+}
+
+
+.grid-container :active {
+    position: relative;
+    border: 2px solid mediumblue;
+}
