@@ -1,36 +1,58 @@
-function clearScreen() {
-    document.getElementById("screen").value = "";
+function display(value) {
+    var screen = document.getElementById("screen");
+    screen.value += value;
+    screen.scrollLeft = screen.scrollWidth;
 }
 
-function display(value) {
-    document.getElementById("screen").value += value;
+
+function clearScreen() {
+    var screen = document.getElementById("screen");
+    screen.value = "";
+    screen.scrollLeft = 0;
 }
+
 
 function calculate() {
-    var p = document.getElementById("screen").value;
-    var q = eval(p);
-    document.getElementById("screen").value = q;
+    var expression = document.getElementById("screen").value;
+    var result = eval(expression);
+    document.getElementById("screen").value = result;
+    addToHistory(expression, result);
 }
 
+
 function deletes() {
-    var screen = document.getElementById("screen")
-    if(screen.value.length > 0)
-    {
-        screen.value = screen.value.substring(0, screen.value.length-1);
+    var screen = document.getElementById("screen");
+    if (screen.value.length > 0) {
+        screen.value = screen.value.substring(0, screen.value.length - 1);
     }
 }
 
-function displayCartItems() {
-    var cartContainer = document.getElementById('cart-items');
-    var cartItems = JSON.parse(localStorage.getItem('cart'));
-    if (cartItems && cartItems.length > 0) {
-        cartContainer.innerHTML = '';
-        cartItems.forEach(item => {
-            var itemElement = document.createElement('div');
-            itemElement.textContent = item.name + " - Customizations: " + item.customizations;
-            cartContainer.appendChild(itemElement);
-        });
+
+var calculationHistory = JSON.parse(localStorage.getItem('calculationHistory')) || [];
+
+
+function addToHistory(expression, result) {
+    calculationHistory.push({ expression: expression, result: result });
+    localStorage.setItem('calculationHistory', JSON.stringify(calculationHistory));
+}
+
+
+var currentHistoryIndex = -1;
+function displayHistory() {
+    var screen = document.getElementById('screen');
+
+
+    if (currentHistoryIndex === -1) {
+        if (calculationHistory.length > 0) {
+            currentHistoryIndex = calculationHistory.length - 1;
+            screen.value = calculationHistory[currentHistoryIndex].expression + " = " + calculationHistory[currentHistoryIndex].result;
+        } else {
+            screen.value = 'No history available';
+        }
+    } else if (currentHistoryIndex > 0) {
+        currentHistoryIndex--;
+        screen.value = calculationHistory[currentHistoryIndex].expression + " = " + calculationHistory[currentHistoryIndex].result;
     } else {
-        cartContainer.innerHTML = '<div>Your cart is empty.</div>';
+        screen.value = 'Beginning of history';
     }
 }

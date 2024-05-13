@@ -1,13 +1,11 @@
-body
-{
+body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: navy;
 }
-#Calculator
-{
+#Calculator {
     background-color: slategrey;
     padding-top: 45px;
     justify-content: center;
@@ -19,8 +17,7 @@ body
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
 }
-#screen
-{
+#screen {
     width: 90%;
     margin-left: 20px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -35,6 +32,9 @@ body
     background-color: mintcream;
     font-size: 50px;
     color: darkblue;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap;
 }
 .grid-container {
     padding-top: 100px;
@@ -59,25 +59,54 @@ body
     border-radius: 25px;
 }
 
-.grid-container :hover {
+
+.grid-item:hover {
     background: royalblue;
 }
+
+
 
 
 .otherblue {
     background-color: dodgerblue;
 }
 
+
 .navyblue {
     background-color: #3e4ebd;
 }
+
 
 .darkblue {
     background-color: skyblue;
 }
 
 
-.grid-container :active {
+
+
+.grid-item:active {
     position: relative;
     border: 2px solid mediumblue;
 }
+
+
+#history-container {
+    position: absolute;
+    top: 0;
+    right: calc(100% + 10px);
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+
+.history-container div {
+    margin-bottom: 10px;
+}
+
+
+.history-container div:last-child {
+    margin-bottom: 0;
+}
+
