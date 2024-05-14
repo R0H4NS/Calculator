@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: navy;
+    overflow: hidden;
 }
 #Calculator {
     background-color: slategrey;
@@ -110,3 +111,18 @@ body {
     margin-bottom: 0;
 }
 
+.grid-item:hover {
+    animation: pulse .5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
