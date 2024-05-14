@@ -6,6 +6,7 @@ function display(value) {
 
 
 function clearScreen() {
+    var calculationHistory = 0;
     var screen = document.getElementById("screen");
     screen.value = "";
     screen.scrollLeft = 0;
@@ -53,6 +54,6 @@ function displayHistory() {
         currentHistoryIndex--;
         screen.value = calculationHistory[currentHistoryIndex].expression + " = " + calculationHistory[currentHistoryIndex].result;
     } else {
-        screen.value = 'Beginning of history';
+        currentHistoryIndex=-1;
     }
 }
